@@ -1,6 +1,6 @@
 'use client'
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter'
-import ThemeToggle from './components/ThemeToggle'
+import ThemeToggle, { ColorModeContext } from './components/ThemeToggle'
 import { createContext, useMemo, useState } from 'react'
 import { ThemeProvider, createTheme } from '@mui/material'
 import { getDesignTokens } from '@/theme'
@@ -8,8 +8,6 @@ import CssBaseline from '@mui/material/CssBaseline'
 
 import { Manrope } from 'next/font/google'
 const manrope = Manrope({ subsets: ['latin'] })
-
-export const ColorModeContext = createContext({ toggleColorMode: () => {} })
 
 export default function RootLayout({
   children,

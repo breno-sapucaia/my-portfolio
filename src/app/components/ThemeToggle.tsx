@@ -2,9 +2,9 @@
 import { Box, PaletteMode } from '@mui/material'
 import ContrastIcon from '@mui/icons-material/Contrast'
 import { useTheme, createTheme } from '@mui/material/styles'
-import { useContext } from 'react'
-import { ColorModeContext } from '../layout'
+import { createContext, useContext } from 'react'
 
+export const ColorModeContext = createContext({ toggleColorMode: () => {} })
 type ThemeToggleProps = {
   mode: PaletteMode
 }
