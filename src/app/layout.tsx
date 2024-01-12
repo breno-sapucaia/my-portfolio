@@ -5,7 +5,7 @@ import { createContext, useMemo, useState } from 'react'
 import { ThemeProvider, createTheme } from '@mui/material'
 import { getDesignTokens } from '@/theme'
 import CssBaseline from '@mui/material/CssBaseline'
-
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Manrope } from 'next/font/google'
 const manrope = Manrope({ subsets: ['latin'] })
 
@@ -34,6 +34,7 @@ export default function RootLayout({
     >
       <body className={manrope.className}>
         <CssBaseline />
+        <SpeedInsights />
         <ColorModeContext.Provider value={colorMode}>
           <ThemeProvider theme={theme}>
             <ThemeToggle mode={mode} />
