@@ -1,7 +1,6 @@
 'use client'
 import { Box, PaletteMode } from '@mui/material'
 import ContrastIcon from '@mui/icons-material/Contrast'
-import { useTheme, createTheme } from '@mui/material/styles'
 import { createContext, useContext } from 'react'
 
 export const ColorModeContext = createContext({ toggleColorMode: () => {} })
