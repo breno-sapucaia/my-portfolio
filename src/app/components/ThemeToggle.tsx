@@ -20,11 +20,12 @@ const ThemeToggle = ({ mode }: ThemeToggleProps) => {
         width: '72px',
         height: '72px',
         borderRadius: '72px',
-        position: 'absolute',
+        position: 'fixed',
         bottom: 32,
         right: 32,
         cursor: 'pointer',
         transition: 'all 1s ease',
+        zIndex: 10,
       }}
       bgcolor="primary.main"
       onClick={colorMode.toggleColorMode}

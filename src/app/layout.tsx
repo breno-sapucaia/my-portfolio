@@ -26,7 +26,12 @@ export default function RootLayout({
 
   const theme = useMemo(() => createTheme(getDesignTokens(mode)), [mode])
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      style={{
+        backgroundColor: theme.palette.mode === 'light' ? '#fff' : '#161616',
+      }}
+    >
       <body className={manrope.className}>
         <CssBaseline />
         <ColorModeContext.Provider value={colorMode}>

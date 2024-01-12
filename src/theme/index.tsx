@@ -1,7 +1,11 @@
-import { PaletteMode, ThemeOptions } from '@mui/material'
+import { PaletteMode, ThemeOptions as IThemeOptions } from '@mui/material'
+import { ThemeOptions } from '@mui/material/styles'
 import components from './components'
 import typography from './typography'
-export const getDesignTokens = (mode: PaletteMode): ThemeOptions => ({
+
+export const getDesignTokens = (
+  mode: PaletteMode
+): ThemeOptions & IThemeOptions => ({
   typography,
   components,
   palette: {
@@ -23,6 +27,7 @@ export const getDesignTokens = (mode: PaletteMode): ThemeOptions => ({
           text: {
             primary: '#1f1f1f',
             secondary: '#9c8cfb',
+            light: '#999',
           },
         }
       : {
@@ -41,6 +46,7 @@ export const getDesignTokens = (mode: PaletteMode): ThemeOptions => ({
           text: {
             primary: '#ffff',
             secondary: '#9c8cfb',
+            light: '#999',
           },
         }),
   },
