@@ -6,7 +6,7 @@ import typography from './typography'
 export const getDesignTokens = (
   mode: PaletteMode
 ): ThemeOptions & IThemeOptions => ({
-  typography,
+  typography: typography(mode),
   components,
   palette: {
     mode,
