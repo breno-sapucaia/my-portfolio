@@ -46,11 +46,8 @@ const Banner = () => {
         <Box display="flex" mt={15} justifyContent="flex-end" gap={2}>
           <Link href="https://github.com/breno-sapucaia" target="_blank">
             <IconButton>
-              <Box
-                component={GithubLogo}
-                sx={{
-                  fontSize: '1rem',
-                }}
+              <GithubLogo
+                fill={theme.palette.mode === 'light' ? '#000' : '#fff'}
               />
             </IconButton>
           </Link>
@@ -59,11 +56,8 @@ const Banner = () => {
             target="_blank"
           >
             <IconButton>
-              <Box
-                component={Linkedin}
-                sx={{
-                  fontSize: '1rem',
-                }}
+              <Linkedin
+                fill={theme.palette.mode === 'light' ? '#000' : '#fff'}
               />
             </IconButton>
           </Link>
@@ -72,11 +66,8 @@ const Banner = () => {
             target="_blank"
           >
             <IconButton>
-              <Box
-                component={InstagramLogo}
-                sx={{
-                  fontSize: '1rem',
-                }}
+              <InstagramLogo
+                fill={theme.palette.mode === 'light' ? '#000' : '#fff'}
               />
             </IconButton>
           </Link>
