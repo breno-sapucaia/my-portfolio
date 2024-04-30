@@ -29,7 +29,23 @@ const Banner = () => {
     >
       <Container maxWidth="lg">
         <Box display="flex" gap="32px">
-          <Image src="/me.png" alt="eu" width={200} height={200} priority />
+          <Box
+            sx={{
+              position: 'relative',
+              minWidth: 200,
+              maxHeight: 200,
+              borderRadius: 200,
+              overflow: 'hidden',
+            }}
+          >
+            <Image
+              src="/me.jpg"
+              alt="eu"
+              priority
+              fill={true}
+              style={{ objectFit: 'cover' }}
+            />
+          </Box>
           <Box display="flex" flexDirection="column" gap={'26px'}>
             <Typography variant="h1" fontWeight={700} color="text.primary">
               I’m Breno Sapucaia, and welcome to my portfolio.
